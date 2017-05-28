@@ -1,0 +1,51 @@
+<template>
+    <div>
+        <veb-toolbar class="fixed" class-before="background-transparent" class-after="background-primary elevation z2">
+            <veb-icon-button name="menu" class="color-white" @click="reveal=true"></veb-icon-button>
+            <div class="font-title color-white" style="display: inline-block; margin: 0; margin-left: 20px;">{{pageTitle}}</div>
+            <!--<span slot="right">
+                <veb-icon-button name="arrow-left" style="color: white"></veb-icon-button>
+            </span>-->
+        </veb-toolbar>
+        <veb-blur-back background="/background.jpg" style="height: 100vh"></veb-blur-back>
+        <div style="height: 3000px">
+            <veb-button v-ripple class="primary" button-style="raised">Testing</veb-button>
+        </div>
+
+        <veb-reveal v-model="reveal">
+            <veb-navigation></veb-navigation>
+        </veb-reveal>
+    </div>
+</template>
+
+<script>
+import {Button1} from '~assets/code/button.js'
+export default {
+    data () {
+        return {
+            change: true,
+            pageTitle: 'Veb UI',
+            button1: Button1,
+            reveal: false
+        }
+    },
+    head () {
+        return {
+            title: this.pageTitle
+        }
+    },
+    computed: {
+        elevationTransition () {
+            if (this.change) {
+                return 'z24'
+            }
+            return ''
+        }
+    },
+    methods: {
+        toggleClass () {
+            this.change = !this.change
+        }
+    }
+}
+</script>

@@ -1,0 +1,42 @@
+{
+  "name": "veb-doc",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Nizul Zaim <nizulzaim@users.noreply.github.com>",
+  "private": true,
+  "scripts": {
+    "dev": "backpack dev",
+    "build": "nuxt build && backpack build",
+    "start": "cross-env NODE_ENV=production node build/main.js",
+    "precommit": "npm run lint",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "cross-env": "^5.0.0",
+    "deepstream.io": "^2.2.2",
+    "deepstream.io-client-js": "^2.1.5",
+    "express": "^4.15.3",
+    "highlight.js": "^9.11.0",
+    "jquery": "^3.2.1",
+    "js-cookie": "^2.1.4",
+    "mdi": "^1.9.33",
+    "nuxt": "~1.0.0-alpha1",
+    "simplebar": "^2.4.1",
+    "source-map-support": "^0.4.15",
+    "vue-highlight.js": "^2.0.0",
+    "vue-particles": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "backpack-core": "^0.3.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^2.0.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
