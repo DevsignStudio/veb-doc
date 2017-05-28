@@ -1,6 +1,6 @@
 # veb-doc
 
-> Nuxt.js project
+Veb UI documentation for veb-ui project. Veb UI is continuation of Viu UI but Veb UI are trying to create Material Design UI library as NPM package which is different from Viu UI that are meteor packages. This project is still under active development. Due problem on integrating Veb UI package and Nuxt package, this package will include Veb UI directly under packages directory. This Project also try to integrate the NuxtJS with DeepStream real time server.
 
 ## Build Setup
 
