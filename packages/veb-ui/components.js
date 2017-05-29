@@ -7,6 +7,7 @@ import Button from './components/Button.vue'
 import PageContainer from './components/PageContainer.vue'
 import Reveal from './components/Reveal.vue'
 import Navigation from './components/Navigation.vue'
+import NavList from './components/NavList.vue'
 
 export default function (Vue, options) {
     Vue.component('veb-toolbar', Toolbar)
@@ -18,4 +19,5 @@ export default function (Vue, options) {
     Vue.component('veb-page-container', PageContainer)
     Vue.component('veb-reveal', Reveal)
     Vue.component('veb-navigation', Navigation)
+    Vue.component('veb-nav-list', NavList)
 }
