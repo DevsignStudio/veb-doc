@@ -1,3 +1,4 @@
+import each from 'lodash/each'
 export function hasClass (el, className) {
     if (el.classList) { return el.classList.contains(className) } else {
         return !!el.className.match(new RegExp('(\\s|^)' + className +
@@ -29,6 +30,27 @@ export function findAncestor (el, cls) {
     return el
 }
 
+export function children (el, cls) {
+    let child
+    if (el) {
+        each(el.childNodes, (node) => {
+            if (!node.classList) return
+            if (child === undefined && hasClass(node, cls)) child = node
+        })
+    }
+    return child
+}
+
+export function getParentFromClass (t, cls) {
+    if (!t.$parent) {
+        return undefined
+    }
+    if (hasClass(t.$parent.$el, cls)) {
+        return t.$parent
+    }
+    return getParentFromClass(t.$parent, cls)
+}
+
 export function one (el, type, fn) {
     function handler (event) {
         el.removeEventListener(type, handler)
@@ -42,5 +64,7 @@ export default {
     removeClass,
     toggleClass,
     findAncestor,
-    one
+    one,
+    children,
+    getParentFromClass
 }
