@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="reveal">
         <div class="veb-reveal row no-gutter" ref="element">
             <div :class="{innerClass: true, 'veb-reveal-overlay': true, 'has-overlay': hideOverlay}" @click="disable"></div>
             <slot></slot>
