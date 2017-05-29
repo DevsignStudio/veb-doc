@@ -13,7 +13,20 @@
         </div>
 
         <veb-reveal v-model="reveal">
-            <veb-navigation></veb-navigation>
+            <veb-navigation>
+                <veb-nav-list><veb-icon name="home"></veb-icon> Veb UI</veb-nav-list>
+                <veb-nav-list :sublist="true"><veb-icon name="menu"></veb-icon> Hello
+                    <span slot="sublist">
+                        <veb-nav-list><veb-icon name="menu"></veb-icon> Testing</veb-nav-list>
+                    </span>
+                </veb-nav-list>
+                <veb-nav-list :sublist="true"><veb-icon name="menu"></veb-icon> Hello
+                    <span slot="sublist">
+                        <veb-nav-list><veb-icon name="menu"></veb-icon> Testing</veb-nav-list>
+                        <veb-nav-list><veb-icon name="menu"></veb-icon> Testing</veb-nav-list>
+                    </span>
+                </veb-nav-list>
+            </veb-navigation>
         </veb-reveal>
     </div>
 </template>
