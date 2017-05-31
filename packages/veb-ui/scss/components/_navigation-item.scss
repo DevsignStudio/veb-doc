@@ -28,12 +28,12 @@ $var: ".veb-navigation-item";
             top: 12px;
             width: 24px;
             height: 24px;
+            @include transition(all $animation-fast-out-linear-in-timing-function 0.28s);
             & svg {
                 fill: $color-grey;
             }
 
             &.open {
-                @include transition(all $animation-fast-out-linear-in-timing-function 0.28s);
                 @include transform(rotateZ(90deg));
             }
         }
