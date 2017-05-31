@@ -1,38 +1,20 @@
 <template>
     <div>
         <veb-toolbar class="fixed" class-before="background-transparent" class-after="background-primary elevation z2">
-            <veb-icon-button name="menu" class="color-white" @click="reveal=true"></veb-icon-button>
+            <veb-icon-button name="menu" class="color-white" @click="showReveal"></veb-icon-button>
             <div class="font-title color-white" style="display: inline-block; margin: 0; margin-left: 20px;">{{pageTitle}}</div>
-            <!--<span slot="right">
-                <veb-icon-button name="arrow-left" style="color: white"></veb-icon-button>
-            </span>-->
         </veb-toolbar>
         <veb-blur-back background="/background.jpg" style="height: 100vh"></veb-blur-back>
         <div style="height: 3000px">
             <veb-button v-ripple class="primary" button-style="raised">Testing</veb-button>
         </div>
-
-        <veb-reveal v-model="reveal">
-            <veb-navigation>
-                <veb-nav-list><veb-icon name="home"></veb-icon> Veb UI</veb-nav-list>
-                <veb-nav-list :sublist="true"><veb-icon name="menu"></veb-icon> Hello
-                    <span slot="sublist">
-                        <veb-nav-list><veb-icon name="menu"></veb-icon> Testing</veb-nav-list>
-                    </span>
-                </veb-nav-list>
-                <veb-nav-list :sublist="true"><veb-icon name="menu"></veb-icon> Hello
-                    <span slot="sublist">
-                        <veb-nav-list><veb-icon name="menu"></veb-icon> Testing</veb-nav-list>
-                        <veb-nav-list><veb-icon name="menu"></veb-icon> Testing</veb-nav-list>
-                    </span>
-                </veb-nav-list>
-            </veb-navigation>
-        </veb-reveal>
     </div>
 </template>
 
 <script>
 import {Button1} from '~assets/code/button.js'
+import Helper from '../packages/veb-ui/helper.js'
+
 export default {
     data () {
         return {
@@ -58,6 +40,10 @@ export default {
     methods: {
         toggleClass () {
             this.change = !this.change
+        },
+        showReveal () {
+            let layout = Helper.getParentFromClass(this, 'veb-layout')
+            layout.showReveal()
         }
     }
 }

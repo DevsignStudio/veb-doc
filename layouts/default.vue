@@ -1,8 +1,22 @@
 <template>
-    <div style="height: 100%; overflow: hidden">
+    <div style="height: 100%; overflow: hidden" class="veb-layout">
         <veb-scrollbar>
             <nuxt/>
         </veb-scrollbar>
+        <veb-reveal v-model="reveal">
+            <veb-navigation>
+                <nuxt-link to="/" exact>
+                    <veb-nav-list><veb-icon name="home"></veb-icon> Veb UI</veb-nav-list>
+                </nuxt-link>
+                <veb-nav-list :sublist="true"><veb-icon name="shape-plus"></veb-icon> Components
+                    <span slot="sublist">
+                        <nuxt-link to="/components/button" exact>
+                            <veb-nav-list><veb-icon name="crop-landscape"></veb-icon> Button</veb-nav-list>
+                        </nuxt-link>
+                    </span>
+                </veb-nav-list>
+            </veb-navigation>
+        </veb-reveal>
     </div>
 </template>
 
@@ -12,6 +26,16 @@ import MyFooter from '~components/Footer.vue'
 export default {
     components: {
         MyFooter
+    },
+    data () {
+        return {
+            reveal: false
+        }
+    },
+    methods: {
+        showReveal () {
+            this.reveal = true
+        }
     }
 }
 </script>
