@@ -265,6 +265,12 @@ $col-size: 24;
     }
 }
 
+@mixin dark-theme() {
+    .veb-dark-theme {
+        @content;
+    }
+}
+
 @mixin webkit-fix() {
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
         @content;

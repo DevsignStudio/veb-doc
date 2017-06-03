@@ -24,9 +24,12 @@
     "mdi": "^1.9.33",
     "nuxt": "~1.0.0-alpha1",
     "simplebar": "^2.4.1",
+    "socket.io": "^2.0.2",
+    "socket.io-client": "^2.0.2",
     "source-map-support": "^0.4.15",
     "vue-highlight.js": "^2.0.0",
-    "vue-particles": "^1.0.5"
+    "vue-particles": "^1.0.5",
+    "vue-socket.io": "^2.1.1-a"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -38,6 +41,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "socket.io": "^2.0.2"
   }
 }

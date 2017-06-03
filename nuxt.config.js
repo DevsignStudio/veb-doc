@@ -17,10 +17,8 @@ module.exports = {
   ** Global CSS
   */
     css: ['~assets/css/main.css'],
-  /*
-  ** Add axios globally
-  */
-    plugins: ['~plugins/veb-ui', '~plugins/vue-highlight'],
+
+    plugins: ['~plugins/veb-ui', '~plugins/vue-highlight', '~plugins/vue-socket'],
     build: {
         // vendor: ['axios'],
     /*

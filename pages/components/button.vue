@@ -1,7 +1,6 @@
 <template>
     <div class="toolbar-padding">
         <component-toolbar :page-title="pageTitle"></component-toolbar>
-        
         <veb-page-container>
             <div class="components-panel">
                 <div class="components-panel-inner">
@@ -11,6 +10,18 @@
                     <veb-button button-style="flat" class="accent" v-ripple>Button</veb-button>
                     <veb-button button-style="flat" class="color-green" v-ripple>Button</veb-button>
                     <veb-button button-style="flat" disabled>Button</veb-button>
+                </div>
+            </div>
+            <div class="veb-dark-theme">
+                <div class="components-panel">
+                    <div class="components-panel-inner">
+                        <veb-button button-style="flat">Button</veb-button>
+                        <veb-button button-style="flat" v-ripple>Button</veb-button>
+                        <veb-button button-style="flat" class="primary" v-ripple>Button</veb-button>
+                        <veb-button button-style="flat" class="accent" v-ripple>Button</veb-button>
+                        <veb-button button-style="flat" class="color-green" v-ripple>Button</veb-button>
+                        <veb-button button-style="flat" disabled>Button</veb-button>
+                    </div>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -27,6 +38,18 @@
                     <veb-button button-style="raised" disabled>Button</veb-button>
                 </div>
             </div>
+            <div class="veb-dark-theme">
+                <div class="components-panel">
+                    <div class="components-panel-inner">
+                        <veb-button button-style="raised">Button</veb-button>
+                        <veb-button button-style="raised" v-ripple>Button</veb-button>
+                        <veb-button button-style="raised" class="primary" v-ripple>Button</veb-button>
+                        <veb-button button-style="raised" class="accent" v-ripple>Button</veb-button>
+                        <veb-button button-style="raised" class="color-white background-green" v-ripple>Button</veb-button>
+                        <veb-button button-style="raised" disabled>Button</veb-button>
+                    </div>
+                </div>
+            </div>
             <div class="clearfix"></div>
             <highlight-code lang="html">{{button2}}</highlight-code>
         </veb-page-container>
@@ -39,6 +62,18 @@
                     <veb-button class="accent" v-ripple>Button</veb-button>
                     <veb-button class="color-white background-green" v-ripple>Button</veb-button>
                     <veb-button disabled>Button</veb-button>
+                </div>
+            </div>
+            <div class="veb-dark-theme">
+                <div class="components-panel">
+                    <div class="components-panel-inner">
+                        <veb-button>Button</veb-button>
+                        <veb-button v-ripple>Button</veb-button>
+                        <veb-button class="primary" v-ripple>Button</veb-button>
+                        <veb-button class="accent" v-ripple>Button</veb-button>
+                        <veb-button class="color-white background-green" v-ripple>Button</veb-button>
+                        <veb-button disabled>Button</veb-button>
+                    </div>
                 </div>
             </div>
             <div class="clearfix"></div>

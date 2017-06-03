@@ -5389,6 +5389,17 @@ section {
   100% {
     transform: scale(1.5);
     opacity: 0; } }
+.veb-dark-theme button.veb-raised-button:disabled, .veb-dark-theme button.veb-raised-button.disabled, .veb-dark-theme button.veb-raised-button[disabled], .veb-dark-theme button.veb-raised-button.disabled:focus, .veb-dark-theme button.veb-raised-button.disabled.hover,
+.veb-dark-theme a.veb-raised-button:disabled,
+.veb-dark-theme a.veb-raised-button.disabled,
+.veb-dark-theme a.veb-raised-button[disabled],
+.veb-dark-theme a.veb-raised-button.disabled:focus,
+.veb-dark-theme a.veb-raised-button.disabled.hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  pointer-events: none; }
+
 button.veb-raised-button,
 a.veb-raised-button {
   background: #f5f5f5;
@@ -5435,6 +5446,26 @@ a.veb-raised-button {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     pointer-events: none; }
 
+.veb-dark-theme button.veb-flat-button,
+.veb-dark-theme a.veb-flat-button {
+  color: #f5f5f5; }
+  .veb-dark-theme button.veb-flat-button.primary,
+  .veb-dark-theme a.veb-flat-button.primary {
+    color: #3965d5; }
+  .veb-dark-theme button.veb-flat-button.accent,
+  .veb-dark-theme a.veb-flat-button.accent {
+    color: #ec407a; }
+  .veb-dark-theme button.veb-flat-button:disabled, .veb-dark-theme button.veb-flat-button.disabled, .veb-dark-theme button.veb-flat-button[disabled], .veb-dark-theme button.veb-flat-button.disabled:focus, .veb-dark-theme button.veb-flat-button.disabled.hover,
+  .veb-dark-theme a.veb-flat-button:disabled,
+  .veb-dark-theme a.veb-flat-button.disabled,
+  .veb-dark-theme a.veb-flat-button[disabled],
+  .veb-dark-theme a.veb-flat-button.disabled:focus,
+  .veb-dark-theme a.veb-flat-button.disabled.hover {
+    color: #9e9e9e;
+    background: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+    pointer-events: none; }
+
 button.veb-flat-button,
 a.veb-flat-button {
   background: transparent;
@@ -5446,16 +5477,9 @@ a.veb-flat-button {
   button.veb-flat-button.primary,
   a.veb-flat-button.primary {
     color: #2a56c6; }
-  button.veb-flat-button.accent, button.veb-flat-button.error,
-  a.veb-flat-button.accent,
+  button.veb-flat-button.error,
   a.veb-flat-button.error {
     color: #e91e63; }
-  button.veb-flat-button.success,
-  a.veb-flat-button.success {
-    color: #4caf50; }
-  button.veb-flat-button.white,
-  a.veb-flat-button.white {
-    color: #ffffff; }
   button.veb-flat-button:disabled, button.veb-flat-button.disabled, button.veb-flat-button[disabled], button.veb-flat-button.disabled:focus, button.veb-flat-button.disabled.hover,
   a.veb-flat-button:disabled,
   a.veb-flat-button.disabled,
@@ -5467,20 +5491,35 @@ a.veb-flat-button {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     pointer-events: none; }
 
+.veb-dark-theme button.veb-color-button,
+.veb-dark-theme a.veb-color-button {
+  color: #212121;
+  background: #ffffff; }
+  .veb-dark-theme button.veb-color-button.hover, .veb-dark-theme button.veb-color-button:focus,
+  .veb-dark-theme a.veb-color-button.hover,
+  .veb-dark-theme a.veb-color-button:focus {
+    background: #eeeeee; }
+  .veb-dark-theme button.veb-color-button:disabled, .veb-dark-theme button.veb-color-button.disabled, .veb-dark-theme button.veb-color-button[disabled], .veb-dark-theme button.veb-color-button.disabled:focus, .veb-dark-theme button.veb-color-button.disabled.hover,
+  .veb-dark-theme a.veb-color-button:disabled,
+  .veb-dark-theme a.veb-color-button.disabled,
+  .veb-dark-theme a.veb-color-button[disabled],
+  .veb-dark-theme a.veb-color-button.disabled:focus,
+  .veb-dark-theme a.veb-color-button.disabled.hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4); }
+
 button.veb-color-button,
 a.veb-color-button {
   background: #212121;
   color: #ffffff; }
   button.veb-color-button.primary,
   a.veb-color-button.primary {
-    background: #2a56c6; }
+    background: #2a56c6;
+    color: #ffffff; }
   button.veb-color-button.accent,
   a.veb-color-button.accent {
-    background: #e91e63; }
-  button.veb-color-button.inverse,
-  a.veb-color-button.inverse {
-    background: #ffffff;
-    color: #212121; }
+    background: #e91e63;
+    color: #ffffff; }
   button.veb-color-button.hover, button.veb-color-button:focus,
   a.veb-color-button.hover,
   a.veb-color-button:focus {
@@ -5504,32 +5543,10 @@ a.veb-color-button {
   a.veb-color-button[disabled],
   a.veb-color-button.disabled:focus,
   a.veb-color-button.disabled.hover {
-    color: #eeeeee;
-    background: #757575;
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
     pointer-events: none; }
-    button.veb-color-button:disabled.primary, button.veb-color-button.disabled.primary, button.veb-color-button[disabled].primary, button.veb-color-button.disabled:focus.primary, button.veb-color-button.disabled.hover.primary,
-    a.veb-color-button:disabled.primary,
-    a.veb-color-button.disabled.primary,
-    a.veb-color-button[disabled].primary,
-    a.veb-color-button.disabled:focus.primary,
-    a.veb-color-button.disabled.hover.primary {
-      background: #5379da; }
-    button.veb-color-button:disabled.accent, button.veb-color-button.disabled.accent, button.veb-color-button[disabled].accent, button.veb-color-button.disabled:focus.accent, button.veb-color-button.disabled.hover.accent,
-    a.veb-color-button:disabled.accent,
-    a.veb-color-button.disabled.accent,
-    a.veb-color-button[disabled].accent,
-    a.veb-color-button.disabled:focus.accent,
-    a.veb-color-button.disabled.hover.accent {
-      background: #f06292; }
-    button.veb-color-button:disabled.white, button.veb-color-button.disabled.white, button.veb-color-button[disabled].white, button.veb-color-button.disabled:focus.white, button.veb-color-button.disabled.hover.white,
-    a.veb-color-button:disabled.white,
-    a.veb-color-button.disabled.white,
-    a.veb-color-button[disabled].white,
-    a.veb-color-button.disabled:focus.white,
-    a.veb-color-button.disabled.hover.white {
-      background: #f5f5f5;
-      color: #bdbdbd; }
 
 button.veb-raised-button,
 a.veb-raised-button,

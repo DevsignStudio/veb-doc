@@ -2,6 +2,22 @@ $raised-button : ".veb-raised-button";
 $color-button : ".veb-color-button";
 $flat-button : ".veb-flat-button";
 
+@include dark-theme {
+    button#{$raised-button},
+    a#{$raised-button} {
+        &:disabled,
+        &.disabled,
+        &[disabled],
+        &.disabled:focus,
+        &.disabled.hover {
+            background: rgba(#ffffff, 0.2);
+            color: rgba(#ffffff, 0.4);
+            @include elevation(0);
+            pointer-events: none;
+        }
+    }
+}
+
 button#{$raised-button},
 a#{$raised-button} {
     background: $color-grey-100;
@@ -48,10 +64,37 @@ a#{$raised-button} {
     }
 }
 
+@include dark-theme {
+    button#{$flat-button},
+    a#{$flat-button} {
+        color: $color-grey-100;
+
+        &.primary {
+            color: $theme-primary-400;
+        }
+
+        &.accent {
+            color: $theme-accent-400;
+        }
+
+        &:disabled,
+        &.disabled,
+        &[disabled],
+        &.disabled:focus,
+        &.disabled.hover {
+            color: $color-grey-500;
+            background: transparent;
+            @include elevation(0);
+            pointer-events: none;
+        }
+    }
+}
+
 button#{$flat-button},
 a#{$flat-button} {
     background: transparent;
     color: $color-grey-900;
+    
     &.hover,
     &:focus {
         background: rgba(0, 0, 0, 0.1);
@@ -59,15 +102,8 @@ a#{$flat-button} {
     &.primary {
         color: $theme-primary;
     }
-    &.accent,
     &.error {
         color: $theme-accent;
-    }
-    &.success {
-        color: $color-green;
-    }
-    &.white {
-        color: $color-white;
     }
     &:disabled,
     &.disabled,
@@ -81,20 +117,41 @@ a#{$flat-button} {
     }
 }
 
+@include dark-theme {
+    button#{$color-button},
+    a#{$color-button} {
+        color: $color-grey-900;
+        background: $color-white;
+        &.hover,
+        &:focus {
+            background: $color-grey-200;
+        }
+
+        &:disabled,
+        &.disabled,
+        &[disabled],
+        &.disabled:focus,
+        &.disabled.hover {
+            background: rgba(#ffffff, 0.2);
+            color: rgba(#ffffff, 0.4);
+        }
+    }
+    
+}
+
 button#{$color-button},
 a#{$color-button} {
     background: $color-grey-900;
     color: $color-white;
     &.primary {
         background: $theme-primary;
+        color: $color-white;
     }
     &.accent {
         background: $theme-accent;
+        color: $color-white;
     }
-    &.inverse {
-        background: $color-white;
-        color: $color-grey-900;
-    }
+
     &.hover,
     &:focus {
         background: $color-grey-800;
@@ -114,20 +171,10 @@ a#{$color-button} {
     &[disabled],
     &.disabled:focus,
     &.disabled.hover {
-        color: $color-grey-200;
-        background: $color-grey-600;
+        background: rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.3);
         @include elevation(0);
         pointer-events: none;
-        &.primary {
-            background: $theme-primary-300;
-        }
-        &.accent {
-            background: $theme-accent-300;
-        }
-        &.white {
-            background: $color-grey-100;
-            color: $color-grey-400;
-        }
     }
 }
 

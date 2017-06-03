@@ -5,14 +5,10 @@
             <div class="font-title color-white" style="display: inline-block; margin: 0; margin-left: 20px;">{{pageTitle}}</div>
         </veb-toolbar>
         <veb-blur-back background="/background.jpg" style="height: 100vh"></veb-blur-back>
-        <div style="height: 3000px">
-            <veb-button v-ripple class="primary" button-style="raised">Testing</veb-button>
-        </div>
     </div>
 </template>
 
 <script>
-import {Button1} from '~assets/code/button.js'
 import Helper from '../packages/veb-ui/helper.js'
 
 export default {
@@ -20,7 +16,6 @@ export default {
         return {
             change: true,
             pageTitle: 'Veb UI',
-            button1: Button1,
             reveal: false
         }
     },
