@@ -18,7 +18,7 @@ module.exports = {
   */
     css: ['~assets/css/main.css'],
 
-    plugins: ['~plugins/veb-ui', '~plugins/vue-highlight', '~plugins/vue-socket'],
+    plugins: ['~plugins/veb-ui', '~plugins/vue-highlight', '~plugins/veb-subscribe'],
     build: {
         // vendor: ['axios'],
     /*
