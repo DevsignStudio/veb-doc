@@ -19,10 +19,17 @@ export default {
             title: this.pageTitle
         }
     },
+    mounted () {
+        setTimeout(() => {
+            this.hello = 'Change'
+        }, 5000)
+    },
     veb: {
         subscribe: {
             messages () {
-                return ['hello']
+                if (this) {
+                    return [this.hello]
+                }
             }
         },
         messages (m) {

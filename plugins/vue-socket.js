@@ -2,22 +2,10 @@ import Vue from 'vue'
 import each from 'lodash/each'
 import omit from 'lodash/omit'
 import isFunction from 'lodash/isFunction'
-// import SocketIO from 'socket.io-client'
 import Observer from '../packages/veb-socket/Observer'
 import Emitter from '../packages/veb-socket/Emitter'
 
 let server = `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
-// let io = SocketIO(server)
-// const { defineReactive } = Vue.util
-
-// Vue.prototype.$socket = io
-// const merge = Vue.config.optionMergeStrategies.computed
-// Vue.config.optionMergeStrategies.veb = function (toVal, fromVal) {
-//     if (!toVal) return fromVal
-//     if (!fromVal) return toVal
-//     console.log(toVal)
-//     return merge(toVal, fromVal)
-// }
 let observer = new Observer(server)
 Vue.prototype.$socket = observer.Socket
 
@@ -49,14 +37,18 @@ Vue.mixin({
         }
         if (subscribe) {
             each(subscribe, (item, key) => {
-                let funcArr = item
+                let socket = params => this.$socket.emit(key, params)
                 if (isFunction(item)) {
-                    funcArr = item()
+                    this.$watch(item, params => {
+                        socket(params)
+                    }, {
+                        immediate: true
+                    })
+                } else {
+                    socket(item)
                 }
-                this.$socket.emit(key, funcArr)
             })
         }
-        // console.log(this.$socket)
     },
     beforeDestroy () {
         let sockets = omit(this.$options['veb'], 'subscribe')
