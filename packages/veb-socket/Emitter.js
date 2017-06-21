@@ -1,3 +1,6 @@
+// using vue-socket code
+// https://github.com/MetinSeylan/Vue-Socket.io/
+
 export default new class {
     constructor () {
         this.listeners = new Map()

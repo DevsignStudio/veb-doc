@@ -1,3 +1,6 @@
+// using vue-socket code
+// https://github.com/MetinSeylan/Vue-Socket.io/
+
 import Emitter from './Emitter'
 import Socket from 'socket.io-client'
 
