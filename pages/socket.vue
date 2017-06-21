@@ -24,6 +24,9 @@ export default {
             messages () {
                 return ['hello']
             }
+        },
+        messages (m) {
+            this.value = m
         }
     }
 }
